@@ -3,8 +3,8 @@
 ## Install
 
 ```
-git clone
-cd sqlite
+git clone https://github.com/ICJIA/sqlite-wasm.git
+cd sqlite-wasm
 npm install
 ```
 
