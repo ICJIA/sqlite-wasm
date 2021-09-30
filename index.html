@@ -9,6 +9,7 @@
       const dataPromise = fetch("test.sqlite").then((res) => res.arrayBuffer());
       const [SQL, buf] = await Promise.all([sqlPromise, dataPromise]);
       const db = new SQL.Database(new Uint8Array(buf));
+      //db.run("INSERT INTO test VALUES (?,?)", [3, 333]);
       var res = db.exec("SELECT * FROM test");
       document.getElementById("results").innerHTML = JSON.stringify(
         res,
